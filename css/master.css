@@ -1,0 +1,183 @@
+/*
+	Assignment for Thinkful Front-end Dev Bootcamp
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Make everything border-box for easily applying padding and borders with percentile widths. */
+* {
+	box-sizing: border-box;
+}
+
+/**
+ * Prevent iOS text size adjust after orientation change, without disabling user zoom.
+ */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+	line-height: 1.4;
+	color: #333;
+}
+
+h1, h2 {
+	font-family: "Roboto Slab", serif;
+}
+
+/* Responsive images */
+img {
+	max-width: 100%;
+}
+
+.container {
+	max-width: 960px;
+	padding: 0 1em;
+	margin: 0 auto;
+}
+
+h1, h2 {
+	text-align: center;
+	color: white;
+	font-size: 3em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: -.01em;
+}
+.masthead {
+	background: #444;
+	text-align: center;
+	padding: 1em 0;
+	color: white;
+}
+.masthead p {
+	margin-top: 1em;
+}
+form {
+	margin: 1em 0;
+}
+input {
+	background: none;
+	border: none;
+}
+#query {
+	border: 1px solid #ccc;
+	background: white;
+	padding: 1em;
+}
+input[type=submit] {
+	background: #4CD049;
+	padding: 1em;
+	color: white;
+	text-transform: uppercase;
+	margin-left: 1em;
+	font-weight: bold;
+}
+#results {
+	padding: 1em 0;
+}
+#results li {
+	float: left;
+	width: 30%;
+	padding: 1em;
+	border: 1px solid #ccc;
+	border-bottom: 3px solid #bbb;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+#results li:nth-child(3n+1) {
+	clear: both;
+}
+#results li span {
+	display: block;
+}
+.name {
+	font-weight: bold;
+}
+.sub-title {
+	margin-top: .5em;
+	font-size: .8em;
+}
+#results img {
+	display: block;
+	margin: 1em auto;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+#results a {
+	text-decoration: none;
+	color: #6FA90B;
+	display: block;
+	margin-top: .4em;
+}
+
+@media only screen and (max-width: 500px) {
+	#results li {
+		float: none;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+	#results li {
+		width: 45%;
+	}
+	#results li:nth-child(odd) {
+		clear: both;
+	}
+	#results li:nth-child(even) {
+		clear: none;
+		float: right;
+	}
+}
