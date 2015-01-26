@@ -160,7 +160,11 @@ input[type=submit] {
 	display: block;
 	margin-top: .4em;
 }
-
+.loading {
+	padding: 2em;
+	text-align: center;
+	font-weight: bold;
+}
 @media only screen and (max-width: 500px) {
 	#results li {
 		float: none;

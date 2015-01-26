@@ -16,11 +16,9 @@
  	function getResults() {
  		var searchTerm = $("#query").val();
  		$("#results").html("");
+ 		$(".loading").text("Loading...");
  		if (/\S/.test(searchTerm)) {
- 			var data = getData();
- 			$.each(data.items, function (index, book) {
- 				showBook(book);
- 			});
+ 			getData(searchTerm);
  		}
  	}
 
@@ -44,7 +42,6 @@
  	 */
  	function getSpan(klass, text) {
  		if (typeof text != "undefined") {
- 			console.log(text);
  			return "<span class='" + klass + "'>" + text + "</span>";
  		} else{
  			return "";
@@ -68,10 +65,17 @@
  	/**
  	 * Makes an ajax call to the server and returns the JSON object.
  	 */
- 	function getData() {
- 		// We will add AJAX call in the next iteration of the app.
- 		return books;
+ 	function getData(searchTerm) {
+ 		var params = {
+ 			q: searchTerm
+ 		};
+ 		
+ 		$.getJSON("https://www.googleapis.com/books/v1/volumes", params, function (data) {
+ 			$(".loading").text("");
+ 			$.each(data.items, function (index, book) {
+ 				showBook(book);
+ 			});
+ 		});
  	}
-
  	getResults();
 });
